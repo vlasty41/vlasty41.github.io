@@ -28,8 +28,9 @@ html {
 body {
     margin: 0;
     background-size: 100% 100%;
-    background: rgb(255,121,121);
-    background: linear-gradient(360deg, rgba(255,121,121,1) 0%, rgba(154,154,224,1) 55%, rgba(0,212,255,1) 100%);
+    background-color: black;
+    /*background: rgb(255,121,121);*/
+    /*background: linear-gradient(360deg, rgba(255,121,121,1) 0%, rgba(154,154,224,1) 55%, rgba(0,212,255,1) 100%);*/
     overflow-x: hidden;
 }
 
@@ -44,10 +45,11 @@ nav {
 }
 
 .content-wrapper {
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(69,69,69,0.6);
     border-radius: 20px;
     display: block;
     margin: 5%;
+    backdrop-filter: blur(5px);
 }
 
 p {padding-left: 20px;}
@@ -113,9 +115,14 @@ h1 {padding-top: 20px;
     96% {color: rgb(255, 0, 32);}
     100% {color: rgb(255, 0, 0);}
 }
-
+svg {
+    background-repeat: repeat-x;
+}
 .wave {
-    background: url(../img/new_wave.svg) repeat-x; 
+    /*background: url(../img/new_wave.svg) repeat-x;*/
+    --svg: url(../img/wave.svg);
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);*/
     position: absolute;
     left: 0;
     bottom: 0;
@@ -123,8 +130,10 @@ h1 {padding-top: 20px;
     width: 7680px;
     height: 212px;
     z-index:-1
-} /* this eats cpu/gpu a bit worrying because i thought SVG will be a better solution but still it runs better and eats less than js maybe performance will get better when i delete all the junk...*/
-
+}
+.wave:hover {
+    fill: red;
+}
 .w1 {animation: wave 25s cubic-bezier(0.33, 0.84, 0.65, 0.15) infinite;}
 .w2 {animation: wave 20s cubic-bezier(0.15, 0.65, 0.84, 0.33) infinite;}
 .w3 {animation: wave 30s cubic-bezier(0.15, 0.65, 0.84, 0.33) infinite;}
