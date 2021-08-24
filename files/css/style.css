@@ -29,12 +29,13 @@ body {
     margin: 0;
     background-size: 100% 100%;
     /*background-color: black;*/
-    /*background: rgb(255,121,121);*/
+    background: rgb(255,121,121);
     background: linear-gradient(360deg, rgba(255,121,121,1) 0%, rgba(154,154,224,1) 55%, rgba(0,212,255,1) 100%);
     overflow-x: hidden;
 }
 
 #main {
+    margin: 0;
     overflow-x: hidden;
 }
 
@@ -115,27 +116,36 @@ h1 {padding-top: 20px;
     96% {color: rgb(255, 0, 32);}
     100% {color: rgb(255, 0, 0);}
 }
-svg {
-    background-repeat: repeat-x;
-}
+/*
 .wave {
-    background: url(../img/new_wave.svg) repeat-x;
+    background: url("https://vlasty41.github.io/files/img/new_wave.svg") repeat-x;
     position: absolute;
     left: 0;
     bottom: 0;
     top: 49vh;
     width: 7680px;
     height: 212px;
-    z-index:-1
+    z-index:-1;
+}*/
+
+.wave {
+    --svg: url("https://vlasty41.github.io/files/img/fixed.svg");
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    background-color: blue;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 49vh;
+    width: 7680px;
+    height: 212px;
+    z-index:-1;
 }
-.wave:hover {
-    fill: red;
-}
-.w1 {animation: wave 25s cubic-bezier(0.33, 0.84, 0.65, 0.15) infinite;}
+
+.w1 {animation: wave 5s cubic-bezier(0.33, 0.84, 0.65, 0.15) infinite;}
 .w2 {animation: wave 20s cubic-bezier(0.15, 0.65, 0.84, 0.33) infinite;}
 .w3 {animation: wave 30s cubic-bezier(0.15, 0.65, 0.84, 0.33) infinite;}
 .w4 {animation: wave 27s linear infinite;}
-.w5 {animation: wave 20s cubic-bezier(0.2, 0.8, 0.6, 0.5) infinite;}
 
 @keyframes wave {
     from {
