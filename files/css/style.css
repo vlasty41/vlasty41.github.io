@@ -122,7 +122,7 @@ svg {
     /*background: url(../img/new_wave.svg) repeat-x;*/
     --svg: url(../img/wave.svg);
     -webkit-mask-image: var(--svg);
-    mask-image: var(--svg);*/
+    mask-image: var(--svg);
     position: absolute;
     left: 0;
     bottom: 0;
