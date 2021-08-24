@@ -1,0 +1,219 @@
+body
+{
+    margin: 0;
+    height: 100vh;
+    background-size: 100% 100%;
+    background-color: rgb(64, 0, 255);
+    overflow: hidden;
+    font-family: 'Open Sans';
+}
+/*canvas {
+  display: block;
+  vertical-align: bottom; <- lol
+}*/
+.noshow {
+    display: none;
+}
+.on {
+    color: white;
+    text-shadow: 0px 0px 5px white;
+}
+.nowave {
+    display: none;
+}
+.hidden {
+    visibility: hidden;
+}
+/*
+#debug {
+    position: absolute;
+    top: 2.5vh;
+    left: 52vw;
+    width: 40vw;
+    height: 90vh;
+    padding: 1vw;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 11;
+    overflow: auto;
+    color: white;
+    font-size: 10px;
+}
+*/
+#cover {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom left, rgba(0,0,0,0.01), rgba(0,0,0,0.4)) /*it just works*/
+}
+#cover3{
+    position: absolute;
+    width: 100vw;
+    height: 100vh; /*daylight*/
+}
+#main {
+    position: relative;
+    height: 100vh;
+}
+#effect {
+    position: absolute;
+    margin: 0 auto;
+    width: 25vw;
+    height: 25vh;
+    top: 40vh;
+    left: 15vw;
+    /* center
+    top: 37.5vh;
+	left: 37.5vw;
+    */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 15;
+
+    /* debug only
+    background-color: white;
+    backface-visibility: visible;*/
+    animation: dimension 25s linear infinite;
+}
+@keyframes dimension {
+    0% {
+        transform: rotate3d(0, 0, 1, 0deg);
+    }
+    100% {
+        transform: rotate3d(0, 0, 1, 720deg);
+    }
+}/* Původně 3D efect (nevypadal dobře) */
+/*wave plugin - very slow and buggy on slow pcs also battery eater (only garbage now)
+#intro {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 50vh;
+}
+*/
+/*
+@keyframes beastar {
+    0% {
+        color: rgb(255, 0, 0);
+    }
+
+    4% {
+        color: rgb(255, 64, 0);
+    }
+
+    8% {
+        color: rgb(255, 128, 0);
+    }
+
+    12% {
+        color: rgb(255, 191, 0);
+    }
+
+    16% {
+        color: rgb(255, 255, 0);
+    }
+
+    20% {
+        color: rgb(191, 255, 0);
+    }
+    24% {
+        color: rgb(128, 255, 0);
+    }
+    28% {
+        color: rgb(64, 255, 0);
+    }
+    32% {
+        color: rgb(0, 255, 0);
+    }
+    36% {
+        color: rgb(0, 255, 64);
+    }
+    40% {
+        color: rgb(0, 255, 128);
+    }
+    44% {
+        color: rgb(0, 255, 191);
+    }
+    48% {
+        color: rgb(0, 255, 255);
+    }
+    52% {
+        color: rgb(0, 191, 255);
+    }
+    56% {
+        color: rgb(0, 128, 255);
+    }
+    60% {
+        color: rgb(0, 64, 255);
+    }
+    64% {
+        color: rgb(0, 0, 255);
+    }
+    68% {
+        color: rgb(64, 0, 255);
+    }
+    72% {
+        color: rgb(128, 0, 255);
+    }
+    76% {
+        color: rgb(191, 0, 255);
+    }
+    80% {
+        color: rgb(255, 0, 255);
+    }
+    84% {
+        color: rgb(255, 0, 191);
+    }
+    88% {
+        color: rgb(255, 0, 128);
+    }
+    92% {
+        color: rgb(255, 0, 64);
+    }
+    96% {
+        color: rgb(255, 0, 32);
+    }
+    100% {
+        color: rgb(255, 0, 0);
+    }
+}*/
+.wave {
+    background: url(files/img/new_wave.svg) repeat-x; 
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 49vh;
+    width: 7680px;
+    height: 212px;
+} /* this eats cpu/gpu a bit worrying because i thought SVG will be a better solution but still it runs better and eats less than js maybe performance will get better when i delete all the junk...*/
+.w1 {
+    z-index:1;
+    animation: wave 25s cubic-bezier(0.33, 0.84, 0.65, 0.15) infinite;
+}
+.w2 {
+    z-index:1;
+    animation: wave 20s cubic-bezier(0.15, 0.65, 0.84, 0.33) infinite;
+}
+.w3 {
+    z-index:1;
+    animation: wave 30s cubic-bezier(0.15, 0.65, 0.84, 0.33) infinite;
+}
+.w4 {
+    z-index:1;
+    animation: wave 27s linear infinite;
+}
+.w5 {
+    z-index:1;
+    animation: wave 20s cubic-bezier(0.2, 0.8, 0.6, 0.5) infinite;
+}
+@keyframes wave {
+    from {
+        transform: translateX(-3840px);}
+ to { transform: translateX(0px); }
+} /*hardcoded, špatný!*/
+@keyframes oldwave {
+    from {
+        transform: translateX(-1920px);}
+ to { transform: translateX(0px); }
+}
+/*2021*/
