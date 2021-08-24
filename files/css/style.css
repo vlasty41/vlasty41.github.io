@@ -1,44 +1,74 @@
-body
-{
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+body {
     margin: 0;
     background-size: 100% 100%;
     background: rgb(255,121,121);
     background: linear-gradient(360deg, rgba(255,121,121,1) 0%, rgba(154,154,224,1) 55%, rgba(0,212,255,1) 100%);
     overflow-x: hidden;
-    font-family: 'Open Sans Condensed', sans-serif;
 }
+
 #main {
     overflow-x: hidden;
 }
+
 nav {
     background-color: azure;
     margin: 0;
     padding: 0.5vh;
 }
+
 .content-wrapper {
     background-color: rgba(0,0,0,0.3);
     border-radius: 20px;
     display: block;
     margin: 5%;
 }
+
 p {padding-left: 20px;}
 h1 {padding-top: 20px;
     padding-left: 20px;
 }
+
 /*canvas {
   display: block;
   vertical-align: bottom; <- lol
 }*/
+
 .noshow {
     display: none;
 }
+
 .on {
     color: white;
     text-shadow: 0px 0px 5px white;
 }
-.nowave {
-    display: none;
-}
+
 .hidden {
     visibility: hidden;
 }
@@ -56,90 +86,34 @@ h1 {padding-top: 20px;
 }
 
 @keyframes test {
-    0% {
-        color: rgb(255, 0, 0);
-    }
-
-    4% {
-        color: rgb(255, 64, 0);
-    }
-
-    8% {
-        color: rgb(255, 128, 0);
-    }
-
-    12% {
-        color: rgb(255, 191, 0);
-    }
-
-    16% {
-        color: rgb(255, 255, 0);
-    }
-
-    20% {
-        color: rgb(191, 255, 0);
-    }
-    24% {
-        color: rgb(128, 255, 0);
-    }
-    28% {
-        color: rgb(64, 255, 0);
-    }
-    32% {
-        color: rgb(0, 255, 0);
-    }
-    36% {
-        color: rgb(0, 255, 64);
-    }
-    40% {
-        color: rgb(0, 255, 128);
-    }
-    44% {
-        color: rgb(0, 255, 191);
-    }
-    48% {
-        color: rgb(0, 255, 255);
-    }
-    52% {
-        color: rgb(0, 191, 255);
-    }
-    56% {
-        color: rgb(0, 128, 255);
-    }
-    60% {
-        color: rgb(0, 64, 255);
-    }
-    64% {
-        color: rgb(0, 0, 255);
-    }
-    68% {
-        color: rgb(64, 0, 255);
-    }
-    72% {
-        color: rgb(128, 0, 255);
-    }
-    76% {
-        color: rgb(191, 0, 255);
-    }
-    80% {
-        color: rgb(255, 0, 255);
-    }
-    84% {
-        color: rgb(255, 0, 191);
-    }
-    88% {
-        color: rgb(255, 0, 128);
-    }
-    92% {
-        color: rgb(255, 0, 64);
-    }
-    96% {
-        color: rgb(255, 0, 32);
-    }
-    100% {
-        color: rgb(255, 0, 0);
-    }
+    0% {color: rgb(255, 0, 0);}
+    4% {color: rgb(255, 64, 0);}
+    8% {color: rgb(255, 128, 0);}
+    12% {color: rgb(255, 191, 0);}
+    16% {color: rgb(255, 255, 0);}
+    20% {color: rgb(191, 255, 0);}
+    24% {color: rgb(128, 255, 0);}
+    28% {color: rgb(64, 255, 0);}
+    32% {color: rgb(0, 255, 0);}
+    36% {color: rgb(0, 255, 64);}
+    40% {color: rgb(0, 255, 128);}
+    44% {color: rgb(0, 255, 191);}
+    48% {color: rgb(0, 255, 255);}
+    52% {color: rgb(0, 191, 255);}
+    56% {color: rgb(0, 128, 255);}
+    60% {color: rgb(0, 64, 255);}
+    64% {color: rgb(0, 0, 255);}
+    68% {color: rgb(64, 0, 255);}
+    72% {color: rgb(128, 0, 255);}
+    76% {color: rgb(191, 0, 255);}
+    80% {color: rgb(255, 0, 255);}
+    84% {color: rgb(255, 0, 191);}
+    88% {color: rgb(255, 0, 128);}
+    92% {color: rgb(255, 0, 64);}
+    96% {color: rgb(255, 0, 32);}
+    100% {color: rgb(255, 0, 0);}
 }
+
 .wave {
     background: url(../img/new_wave.svg) repeat-x; 
     position: absolute;
@@ -150,21 +124,13 @@ h1 {padding-top: 20px;
     height: 212px;
     z-index:1
 } /* this eats cpu/gpu a bit worrying because i thought SVG will be a better solution but still it runs better and eats less than js maybe performance will get better when i delete all the junk...*/
-.w1 {
-    animation: wave 25s cubic-bezier(0.33, 0.84, 0.65, 0.15) infinite;
-}
-.w2 {
-    animation: wave 20s cubic-bezier(0.15, 0.65, 0.84, 0.33) infinite;
-}
-.w3 {
-    animation: wave 30s cubic-bezier(0.15, 0.65, 0.84, 0.33) infinite;
-}
-.w4 {
-    animation: wave 27s linear infinite;
-}
-.w5 {
-    animation: wave 20s cubic-bezier(0.2, 0.8, 0.6, 0.5) infinite;
-}
+
+.w1 {animation: wave 25s cubic-bezier(0.33, 0.84, 0.65, 0.15) infinite;}
+.w2 {animation: wave 20s cubic-bezier(0.15, 0.65, 0.84, 0.33) infinite;}
+.w3 {animation: wave 30s cubic-bezier(0.15, 0.65, 0.84, 0.33) infinite;}
+.w4 {animation: wave 27s linear infinite;}
+.w5 {animation: wave 20s cubic-bezier(0.2, 0.8, 0.6, 0.5) infinite;}
+
 @keyframes wave {
     from {
         transform: translateX(-3840px);}
