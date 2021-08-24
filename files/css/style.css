@@ -7,6 +7,9 @@ body
     overflow-x: hidden;
     font-family: 'Open Sans Condensed', sans-serif;
 }
+#main {
+    overflow-x: hidden;
+}
 nav {
     background-color: azure;
     margin: 0;
