@@ -1,12 +1,26 @@
 body
 {
     margin: 0;
-    height: 100vh;
     background-size: 100% 100%;
     background: rgb(255,121,121);
-    background: linear-gradient(90deg, rgba(255,121,121,1) 0%, rgba(154,154,224,1) 55%, rgba(0,212,255,1) 100%);
-    overflow: hidden;
+    background: linear-gradient(360deg, rgba(255,121,121,1) 0%, rgba(154,154,224,1) 55%, rgba(0,212,255,1) 100%);
+    overflow-x: hidden;
     font-family: 'Open Sans Condensed', sans-serif;
+}
+nav {
+    background-color: azure;
+    margin: 0;
+    padding: 0.5vh;
+}
+.content-wrapper {
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 20px;
+    display: block;
+    margin: 5%;
+}
+p {padding-left: 20px;}
+h1 {padding-top: 20px;
+    padding-left: 20px;
 }
 /*canvas {
   display: block;
@@ -92,8 +106,8 @@ body
     top: 50vh;
 }
 */
-/*
-@keyframes beastar {
+
+@keyframes test {
     0% {
         color: rgb(255, 0, 0);
     }
@@ -177,7 +191,7 @@ body
     100% {
         color: rgb(255, 0, 0);
     }
-}*/
+}
 .wave {
     background: url(../img/new_wave.svg) repeat-x; 
     position: absolute;

@@ -2,12 +2,20 @@
 <html lang="cs">
 <head>
     <title>Můj malý webík</title>>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="files/img/ico.png">
     <link id="a" type="text/css" rel="stylesheet" href="files/css/style.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
     <script src="files/js/jquery-3.3.1.min.js"></script>
+    <script>
+    $(document).ready(function() {
+		$("#test").click(function() {
+            document.getElementById("test").innerHTML = "JAVASCRIPT ✔️";
+		});
+    })
+    </script>
 </head>
 <body>
 <nav>
@@ -15,9 +23,12 @@
 </nav>
 <div id="main">
     <div id="cover">
-        <h1>Hello World</h1>
-        <p>This is just my playground.</p>
-        <p> HTML, CSS, JS through jquery-3</p>
+        <div class="content-wrapper">
+            <h1>Hello World</h1>
+            <p>This is just my playground.</p>
+            <p id="js">HTML, CSS, JS through jquery-3.</p>
+            <p id="test"  style="animation:test 8s infinite; font-weight: bold; text-align:center">🌟 Click here to test Javasrcipt. 🌟</p>
+        </div>
     </div>
 </div>
 <div class="wave w1" id="wave_p"></div>
@@ -26,5 +37,6 @@
 <div class="wave w4"></div>
 <div class="wave w5"></div>
 </div>
+<footer><p style="text-align:center">vlasty41.github.io</p></footer>
 </body>
 </html>
