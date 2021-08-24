@@ -122,7 +122,7 @@ h1 {padding-top: 20px;
     top: 49vh;
     width: 7680px;
     height: 212px;
-    z-index:1
+    z-index:-1
 } /* this eats cpu/gpu a bit worrying because i thought SVG will be a better solution but still it runs better and eats less than js maybe performance will get better when i delete all the junk...*/
 
 .w1 {animation: wave 25s cubic-bezier(0.33, 0.84, 0.65, 0.15) infinite;}
