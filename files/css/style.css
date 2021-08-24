@@ -178,7 +178,7 @@ body
     }
 }*/
 .wave {
-    background: url(files/img/new_wave.svg) repeat-x; 
+    background: url(../img/new_wave.svg) repeat-x; 
     position: absolute;
     left: 0;
     bottom: 0;
