@@ -42,73 +42,18 @@ h1 {padding-top: 20px;
 .hidden {
     visibility: hidden;
 }
-/*
-#debug {
-    position: absolute;
-    top: 2.5vh;
-    left: 52vw;
-    width: 40vw;
-    height: 90vh;
-    padding: 1vw;
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: 11;
-    overflow: auto;
-    color: white;
-    font-size: 10px;
-}
-*/
+
 #cover {
     position: absolute;
     width: 100vw;
     height: 100vh;
     background: linear-gradient(to bottom left, rgba(0,0,0,0.01), rgba(0,0,0,0.4)) /*it just works*/
 }
-#cover3{
-    position: absolute;
-    width: 100vw;
-    height: 100vh; /*daylight*/
-}
+
 #main {
     position: relative;
     height: 100vh;
 }
-#effect {
-    position: absolute;
-    margin: 0 auto;
-    width: 25vw;
-    height: 25vh;
-    top: 40vh;
-    left: 15vw;
-    /* center
-    top: 37.5vh;
-	left: 37.5vw;
-    */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 15;
-
-    /* debug only
-    background-color: white;
-    backface-visibility: visible;*/
-    animation: dimension 25s linear infinite;
-}
-@keyframes dimension {
-    0% {
-        transform: rotate3d(0, 0, 1, 0deg);
-    }
-    100% {
-        transform: rotate3d(0, 0, 1, 720deg);
-    }
-}/* Původně 3D efect (nevypadal dobře) */
-/*wave plugin - very slow and buggy on slow pcs also battery eater (only garbage now)
-#intro {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    top: 50vh;
-}
-*/
 
 @keyframes test {
     0% {
@@ -203,25 +148,21 @@ h1 {padding-top: 20px;
     top: 49vh;
     width: 7680px;
     height: 212px;
+    z-index:1
 } /* this eats cpu/gpu a bit worrying because i thought SVG will be a better solution but still it runs better and eats less than js maybe performance will get better when i delete all the junk...*/
 .w1 {
-    z-index:1;
     animation: wave 25s cubic-bezier(0.33, 0.84, 0.65, 0.15) infinite;
 }
 .w2 {
-    z-index:1;
     animation: wave 20s cubic-bezier(0.15, 0.65, 0.84, 0.33) infinite;
 }
 .w3 {
-    z-index:1;
     animation: wave 30s cubic-bezier(0.15, 0.65, 0.84, 0.33) infinite;
 }
 .w4 {
-    z-index:1;
     animation: wave 27s linear infinite;
 }
 .w5 {
-    z-index:1;
     animation: wave 20s cubic-bezier(0.2, 0.8, 0.6, 0.5) infinite;
 }
 @keyframes wave {
@@ -229,9 +170,4 @@ h1 {padding-top: 20px;
         transform: translateX(-3840px);}
  to { transform: translateX(0px); }
 } /*hardcoded, špatný!*/
-@keyframes oldwave {
-    from {
-        transform: translateX(-1920px);}
- to { transform: translateX(0px); }
-}
 /*2021*/
