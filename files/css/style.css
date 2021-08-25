@@ -139,7 +139,7 @@ h1 {padding-top: 20px;
 }
 
 .wave {
-    --svg: url("https://vlasty41.github.io/files/img/fixed.svg");
+    --svg: url("https://vlasty41.github.io/files/img/svg/fixed.svg");
     -webkit-mask-image: var(--svg);
     mask-image: var(--svg);
     background-color: #DBB6FF;
