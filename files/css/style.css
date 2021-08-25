@@ -139,7 +139,7 @@ h1 {padding-top: 20px;
 }
 
 .wave {
-    --svg: url("https://vlasty41.github.io/files/img/svg/fixed.svg");
+    --svg: url("https://vlasty41.github.io/files/img/vector/fixed.svg");
     -webkit-mask-image: var(--svg);
     mask-image: var(--svg);
     background-color: #DBB6FF;
@@ -170,8 +170,8 @@ span {
 
 img {
     display: inline;
-    height: 22px;
-    width: 22px;
+    width: 120px;
+    vertical-align: middle;
     
 } 
 
