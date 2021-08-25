@@ -1,36 +1,12 @@
-* {
-    box-sizing: border-box;
-}
-
 html {
     font-family: 'Open Sans Condensed', sans-serif;
-}
-
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
-
-.row::after {
-    content: "";
-    clear: both;
-    display: table;
 }
 
 body {
     margin: 0;
     background-size: 100% 100%;
-    /*background-color: black;*/
-    background: rgb(255,121,121);
-    background: linear-gradient(360deg, rgba(255,121,121,1) 0%, rgba(154,154,224,1) 55%, rgba(0,212,255,1) 100%);
+    background: rgb(202,173,243);
+    background: linear-gradient(180deg, rgba(202,173,243,1) 0%, rgba(22,22,22,1) 10%, rgba(0,0,0,1) 100%);
     overflow-x: hidden;
 }
 
@@ -40,13 +16,17 @@ body {
 }
 
 nav {
-    background-color: azure;
-    margin: 0;
+    display:flex;
+    color: white;
+    background-color: black;
+    margin: auto;
     padding: 0.5vh;
+    text-align: center;
+    height: 8vh;
 }
 
 .content-wrapper {
-    background-color: rgba(69,69,69,0.6);
+    background-color: rgba(255,255,255,0.65);
     border-radius: 20px;
     display: block;
     margin: 5%;
@@ -57,11 +37,6 @@ p {padding-left: 20px;}
 h1 {padding-top: 20px;
     padding-left: 20px;
 }
-
-/*canvas {
-  display: block;
-  vertical-align: bottom; <- lol
-}*/
 
 .noshow {
     display: none;
@@ -116,40 +91,67 @@ h1 {padding-top: 20px;
     96% {color: rgb(255, 0, 32);}
     100% {color: rgb(255, 0, 0);}
 }
-/*
-.wave {
-    background: url("https://vlasty41.github.io/files/img/new_wave.svg") repeat-x;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    top: 49vh;
-    width: 7680px;
-    height: 212px;
-    z-index:-1;
-}*/
 
 .wave {
     --svg: url("https://vlasty41.github.io/files/img/fixed.svg");
     -webkit-mask-image: var(--svg);
     mask-image: var(--svg);
-    background-color: blue;
+    background-color: #DBB6FF;
     position: absolute;
     left: 0;
     bottom: 0;
-    top: 49vh;
+    top: 55vh;
     width: 7680px;
     height: 212px;
     z-index:-1;
 }
-
-.w1 {animation: wave 5s cubic-bezier(0.33, 0.84, 0.65, 0.15) infinite;}
-.w2 {animation: wave 20s cubic-bezier(0.15, 0.65, 0.84, 0.33) infinite;}
-.w3 {animation: wave 30s cubic-bezier(0.15, 0.65, 0.84, 0.33) infinite;}
-.w4 {animation: wave 27s linear infinite;}
+.wave:nth-child(3) {animation: wave 25s cubic-bezier(0.33, 0.84, 0.65, 0.15) infinite}
+.wave:nth-child(4) {animation: wave 20s cubic-bezier(0.15, 0.65, 0.84, 0.33) infinite}
+.wave:nth-child(5) {animation: wave 30s cubic-bezier(0.15, 0.65, 0.84, 0.33) infinite}
+.wave:nth-child(6) {animation: wave 27s linear infinite}
 
 @keyframes wave {
     from {
         transform: translateX(-3840px);}
  to { transform: translateX(0px); }
-} /*hardcoded, špatný!*/
-/*2021*/
+}
+
+span {
+    display: block;
+    margin: auto;
+    font-size: 1.75em;
+}
+
+img {
+    display: inline;
+    height: 22px;
+    width: 22px;
+    
+} 
+
+.row {    
+    display: flex;
+    color: #ffffff;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    align-items: stretch;
+}
+
+#r1 {
+    order: 1;
+    flex: 25%;
+    align-self: auto;
+}
+
+#r2 {
+    order: 2;
+    flex: 50%;
+    align-self: auto;
+}
+
+#r3 {
+    order: 3;
+    flex: 25%;
+    align-self: auto;
+}
