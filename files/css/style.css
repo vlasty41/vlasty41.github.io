@@ -62,7 +62,7 @@ nav {
     order: 1;
     flex: 35%;
     align-self: auto;
-    background-color: rgba(202,202,243,0.5);
+    background-color: rgba(212, 202, 243, 0.5);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     margin-right: 2.5%;
@@ -75,7 +75,7 @@ nav {
     flex: 65%;
     align-self: auto;
     border-radius: 25px;
-    background-color: rgba(202,202,243,0.5);
+    background-color: rgba(212, 202, 243, 0.5);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
 }
@@ -152,6 +152,7 @@ h1 {padding-top: 20px;
     height: 212px;
     z-index:-1;
 }
+
 .wave:nth-child(2) {animation: wave 25s cubic-bezier(0.33, 0.84, 0.65, 0.15) infinite}
 .wave:nth-child(3) {animation: wave 20s cubic-bezier(0.15, 0.65, 0.84, 0.33) infinite}
 .wave:nth-child(4) {animation: wave 30s cubic-bezier(0.15, 0.65, 0.84, 0.33) infinite}
@@ -217,6 +218,7 @@ img {
 ul {
     text-align: center;
     padding: 0;
+    cursor: default; /*hacky*/
 }
 
 li {
@@ -240,4 +242,16 @@ li {
 object {
     display: inline;
     border-radius: 25px;
+}
+
+/* Safari specific hack*/
+@media not all and (min-resolution:.001dpcm) { 
+    @supports (-webkit-appearance:none) {
+         body {background: linear-gradient(180deg, rgba(202,173,243,1) 0%, rgba(10, 8, 20) 10%, rgba(10, 8, 20) 100%);}
+        .wave:nth-child(2) {animation: none; left: 0vw}
+        .wave:nth-child(3) {animation: none; left: -50vw}
+        .wave:nth-child(4) {animation: none; left: -75vw}
+        .wave:nth-child(5) {animation: none; left: -100vw}
+        .wave  {width: 200vw}
+    }
 }
