@@ -185,6 +185,9 @@ img {
     flex-wrap: nowrap;
     align-content: stretch;
     align-items: stretch;
+    border-bottom: 2.5px solid;
+    border-image: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, rgb(180, 180, 180) 50%, rgba(255, 255, 255, 0) 100%);
+    border-image-slice: 1;
 }
 
 #r1 {
@@ -193,10 +196,16 @@ img {
     align-self: auto;
 }
 
+#r2 > h1 {
+    text-align: center;
+    padding-left: 0;
+}
+
 #r2 {
     order: 2;
     flex: 50%;
     align-self: auto;
+    text-align: center;
 }
 
 #r3 {
@@ -229,6 +238,7 @@ li {
     font-size: 2em;
 }
 
-footer {
-    border-image: linear-gradient(180deg, rgba(202,173,243,1) 0%, rgba(22,22,22,1) 10%, rgba(0,0,0,1) 100%);
+iframe {
+    display: inline;
+    border-radius: 25px;
 }
