@@ -43,24 +43,24 @@ a:visited, a {
 
 nav {
     display:flex;
+    justify-content: flex-start;
+    align-items: center;
     color: white;
     background-color: black;
-    margin: auto;
     padding: 0.5vh;
-    text-align: center;
     height: 8vh;
 }
 
 .flexbox-main {
     display: flex;
-    padding-left: 7.5%;
-    padding-right: 7.5%;
+    padding-left: 15%;
+    padding-right: 15%;
     margin-top: 5vh;
 }
 
 .flex-item:nth-child(1) {
     order: 1;
-    flex: 35%;
+    flex: 20%;
     align-self: auto;
     background-color: rgba(212, 202, 243, 0.5);
     backdrop-filter: blur(5px);
@@ -72,7 +72,7 @@ nav {
 
 .flex-item:nth-child(2) {
     order: 1;
-    flex: 65%;
+    flex: 80%;
     align-self: auto;
     border-radius: 25px;
     background-color: rgba(212, 202, 243, 0.5);
@@ -166,13 +166,12 @@ h1 {padding-top: 20px;
 
 span {
     display: block;
-    margin: auto;
     font-size: 1.75em;
 }
 
 img {
     display: inline;
-    width: 120px;
+    width: 8em;
     vertical-align: middle;
     
 } 
@@ -180,12 +179,13 @@ img {
 .row {    
     display: flex;
     color: #ffffff;
-    padding-left: 7.5%;
-    padding-right: 7.5%;
+    padding-left: 15%;
+    padding-right: 15%;
     flex-direction: row;
     flex-wrap: nowrap;
     align-content: stretch;
     align-items: stretch;
+    background: rgba(6,6,6,1);
     border-bottom: 2.5px solid;
     border-image: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, rgb(180, 180, 180) 50%, rgba(255, 255, 255, 0) 100%);
     border-image-slice: 1;
