@@ -283,8 +283,8 @@ li {
 
 object {
     border-radius: 25px;
-    width: 408px;
-    height: 240px;
+    width: 90%;
+    height: 35vh;
 }
 
 /* Safari specific hack*/
