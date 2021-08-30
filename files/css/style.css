@@ -47,6 +47,7 @@ body {
     margin: 0;
     background-size: 100% 100%;
     background: black;
+    color: white;
     overflow-x: hidden;
     overflow-y: overlay;
 }
@@ -88,7 +89,7 @@ nav {
     order: 1;
     flex: 20%;
     align-self: auto;
-    background-color: rgba(212, 202, 243, 0.5);
+    background-color: rgba(30, 30, 30, 0.8);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     margin-right: 2.5%;
@@ -202,21 +203,18 @@ nav img {
 }
 
 #lftbtn {
-    --svg: url("https://vlasty41.github.io/files/img/vector/next.svg");
-    -webkit-mask-image: var(--svg);
-    mask-image: var(--svg);
-    background-color: #DBB6FF;
+    background-color: black;
     position: absolute;
-    height: 50px;
-    width: 50px;
+    width: 100%;
+    background-size: cover;
+    height: 0;
+    padding: 0; /* reset */
+    padding-bottom: 92%;
     left: 0;
     bottom: 50%;
 }
 #rgtbtn {
-    --svg: url("https://vlasty41.github.io/files/img/vector/next.svg");
-    -webkit-mask-image: var(--svg);
-    mask-image: var(--svg);
-    background-color: #DBB6FF;
+    background-color: black;
     position: absolute;
     height: 50px;
     width: 50px;
@@ -235,6 +233,7 @@ nav img {
     justify-content: center;
     color: white;
     align-items: center;
+    border-style:none;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
     backdrop-filter: blur(5px);
