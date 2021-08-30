@@ -190,6 +190,15 @@ h1 {padding-top: 20px;
  to { transform: translateX(0px); }
 }
 
+@keyframes glow {
+    from {-webkit-filter: drop-shadow(0px 0px 5px white);
+            filter: drop-shadow(0px 0px 5px white);
+    }
+    to {-webkit-filter: drop-shadow(0px 0px 20px 25px white);
+        filter: drop-shadow(0px 0px 20px 25px white);
+    }
+}
+
 span {
     display: block;
     font-size: 1.75em;
@@ -203,22 +212,50 @@ nav img {
 }
 
 #lftbtn {
-    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    box-shadow: white 0px 0px 5px inset;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 25px;
     position: absolute;
-    width: 100%;
-    background-size: cover;
-    height: 0;
-    padding: 0; /* reset */
-    padding-bottom: 92%;
-    left: 0;
+    cursor: pointer;
+    height: 35px;
+    width: 35px;
+    left: 5px;
     bottom: 50%;
 }
+
+#tt {
+    width: 7px;
+    height: 15px;
+    animation: glow 0.5s infinite alternate;
+}
+
+#tt2 {
+    width: 7px;
+    height: 15px;
+    transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    animation: glow 0.5s infinite alternate;
+}
+
 #rgtbtn {
-    background-color: black;
+    display: flex;
+    justify-content: center; /*class here soon, nezapomen*/
+    align-items: center;
+    background: none;
+    box-shadow: white 0px 0px 5px inset;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 25px;
+    cursor: pointer;
     position: absolute;
-    height: 50px;
-    width: 50px;
-    right: 0;
+    height: 35px;
+    width: 35px;
+    right: 5px;
     bottom: 50%;
 }
 
@@ -245,7 +282,7 @@ nav img {
     size: 0.5em;
 }
 
-#carousel img {
+#mainimage {
     opacity: 0.9;
     border-radius: 25px;
     width: 100%;
