@@ -101,7 +101,6 @@ nav {
     flex: 80%;
     align-self: auto;
     border-radius: 25px;
-    background-color: rgba(212, 202, 243, 0.5);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
 }
@@ -195,12 +194,66 @@ span {
     font-size: 1.75em;
 }
 
-img {
+nav img {
     display: inline;
     width: 8em;
     vertical-align: middle;
     
-} 
+}
+
+#lftbtn {
+    --svg: url("https://vlasty41.github.io/files/img/vector/next.svg");
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    background-color: #DBB6FF;
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    left: 0;
+    bottom: 50%;
+}
+#rgtbtn {
+    --svg: url("https://vlasty41.github.io/files/img/vector/next.svg");
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    background-color: #DBB6FF;
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    right: 0;
+    bottom: 50%;
+}
+
+#desc {
+    display: flex;
+    background-color: rgba(30, 30, 30, 0.8);
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 18%;
+    bottom: 0;
+    justify-content: center;
+    color: white;
+    align-items: center;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+
+}
+
+#desc span {
+    size: 0.5em;
+}
+
+#carousel img {
+    opacity: 0.9;
+    border-radius: 25px;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
 
 .row {    
     display: flex;
